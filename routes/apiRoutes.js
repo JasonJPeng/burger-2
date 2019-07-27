@@ -1,3 +1,5 @@
+var express = require("express");
+var router = express.Router();
 // Requiring our models
 var db = require("../models");
 
@@ -6,27 +8,33 @@ var db = require("../models");
 module.exports = function(app) {
    // GET route for getting all of the posts
   app.get("/", function(req, res) {    
-    console.log("==========",res)
-    db.Burger.findAll({}).then(function(result) {
-      res.json(result);
+    db.Burger.findAll({}).then(function(data) {
+      res.render("index", { all: data });
+      // res.json(data);
     });
   });
 
   app.post("/api/order", function(req, res) {    
-    db.Burger.create(req.body).then(function(result) {
-      res.json(result);
+    db.Burger.create({
+      name: req.body.burger
+    }).then(function(result) {
+      // res.json(result);
+      res.redirect("/")
     });
   });
 
   app.put("/api/devour/:id", function(req, res) {    
-    db.Burger.update(req.body,
+    db.Burger.update({
+      devoured: true
+    },
       {
         where: {
           id: req.params.id
         }
       }
       ).then(function(dbPost) {
-      res.json(dbPost);
+      // res.json(dbPost);
+      res.status(200).end()
     });
   });
 

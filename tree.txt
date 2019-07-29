@@ -1,0 +1,23 @@
+
+├── config
+│   └── config.json
+├── models
+│   ├── burger.js
+│   └── index.js
+├── public
+│   ├── assets
+│   │   ├── css
+│   │   │   └── style.css
+│   │   ├── img
+│   │   │   └── burger.gif
+│   │   └── js
+│   │       └── burger.js
+│   └── index-1.html
+├── routes
+│   └── apiRoutes.js
+├── server.js
+└── views
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
+

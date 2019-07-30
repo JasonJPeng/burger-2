@@ -1,7 +1,7 @@
 #  Burger-2
 ## Sequelize Eat-Da-Burger
 
-![burger-2](info/images/burger-2.gif)
+![burger-2](info/Images/burger-2.gif)
 
 ### [https://salty-peak-41517.herokuapp.com/](https://salty-peak-41517.herokuapp.com/)
 

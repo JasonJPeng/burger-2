@@ -4,10 +4,11 @@
  {{#each all}}
    {{#unless devoured}}
     <p>
-      {{id}}. {{name}}
+      {{name}}
 
       {{!-- <button data-id="{{id}}" class="devour">Devour It!</button> --}}
       <button  data-id="{{id}}" type="button" class="btn btn-outline-success btn-sm devour">Devour It !</button>
+      <input type="text" name="customer-{{id}}" id="customer-{{id}}" size=10 >
     </p>
    {{/unless}} 
   
@@ -16,7 +17,7 @@
  </div>
 
  <div id = "order">
-<img src = "/assets/img/burger.gif" width="200px" >
+<img src = "/assets/img/burger-2.gif" width="200px" >
 <form action="/api/order" method="POST">
   <label>Order your burger: </label> 
 	<input type="text" name="burger"></input>
@@ -34,7 +35,7 @@
   {{#each all}}
    {{#if devoured}}
     <p>
-      {{id}}. {{name}}
+     {{name}} {{#if customer}} (eaten by {{customer}}) {{/if}}
     </p>
    {{/if}} 
   

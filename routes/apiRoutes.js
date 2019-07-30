@@ -27,7 +27,8 @@ module.exports = function(app) {
 
   app.put("/api/devour/:id", function(req, res) {    
     db.Burger.update({
-      devoured: true
+      devoured: true,
+      customer: req.body.customer
     },
       {
         where: {

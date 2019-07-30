@@ -10,6 +10,13 @@ module.exports = function(sequelize, DataTypes) {
       devoured: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
+      },
+      customer: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        validate: {
+          len: [1]
+        }
       }
     },{
       freezeTableName: true,
@@ -19,7 +26,6 @@ module.exports = function(sequelize, DataTypes) {
     
     );
   
-
     return Burger;
   };
   

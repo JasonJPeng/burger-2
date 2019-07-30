@@ -2,14 +2,18 @@
 $(function() {
 
 $(".devour").on("click", function(event) {
+    event.preventDefault();
     // Make sure to preventDefault on a submit event.
 
     // Get the ID by finding an element with a "name" attribute equal to the string "id"
     var id = $(this).attr("data-id");
+    var customer = $(`#customer-${id}`).val();
+    if (customer.trim(" ") === "") alert("Please enter the customer name")
 
     // Send the PUT request.
     $.ajax("/api/devour/" + id, {
-      type: "PUT"
+      type: "PUT",
+      data: {customer: customer}
     }).then(
       function() {
         console.log("updated id ", id);

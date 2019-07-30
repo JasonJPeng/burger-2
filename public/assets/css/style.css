@@ -1,5 +1,5 @@
 body {
-    color: #222222;
+    color: blue;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size:12pt;
     background-color: #eeeeee; 
@@ -14,6 +14,11 @@ body {
     /* border: 2px solid red;  */
     padding: 10px 10px 10px 50px;
     margin:0;
+}
+
+h1 {
+    color:orange;
+    font-family: 'Saira Stencil One', cursive;
 }
 
 #fresh, #devoured, #order {

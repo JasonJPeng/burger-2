@@ -8,7 +8,9 @@ var db = require("../models");
 module.exports = function(app) {
    // GET route for getting all of the posts
   app.get("/", function(req, res) {    
-    db.Burger.findAll({}).then(function(data) {
+    db.Burger.findAll({
+      order: [['name', 'asc']]
+    }).then(function(data) {
       res.render("index", { all: data });
       // res.json(data);
     });

@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "burger-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JasonJPeng/burger.git"
+    "url": "git+https://github.com/JasonJPeng/burger-2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JasonJPeng/burger/issues"
+    "url": "https://github.com/JasonJPeng/burger-2/issues"
   },
-  "homepage": "https://github.com/JasonJPeng/burger#readme",
+  "homepage": "https://github.com/JasonJPeng/burger-2#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
